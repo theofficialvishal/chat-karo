@@ -1,17 +1,18 @@
 import express from "express";
+import cookieParser from "cookie-parser";
 import { ENV } from "./lib/env.js";
 import authRoutes from "./routes/auth.route.js";
 import messageRoutes from "./routes/message.route.js";
 import path from "path";
 import { connectDB } from "./lib/db.js";
 
-
 const app = express();
 const __dirname = path.resolve();
 
 const PORT = ENV.PORT || 5000;
 
-app.use(express.json()); //req.bpdy
+app.use(express.json()); //req.body
+app.use(cookieParser()); //get cookie from user browser for authentication
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);

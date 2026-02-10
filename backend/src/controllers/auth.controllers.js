@@ -1,6 +1,8 @@
 import userModel from "../models/user.model.js";
 import bcrypt from "bcryptjs";
-import { generateToken } from "../utils/utils.js";
+import { generateToken } from "../lib/utils.js";
+import { sendWelcomeEmail } from "../email/emailHandlers.js";
+import { ENV } from "../lib/env.js";
 
 export const signup = async (req, res) => {
   const { fullName, email, password } = req.body; //use app.use(express.json()) middleware in server to get data
@@ -48,6 +50,17 @@ export const signup = async (req, res) => {
         email: newUser.email,
         profilePic: newUser.profilePic,
       });
+
+      //send welcome email to user
+      try {
+        await sendWelcomeEmail(
+          savedUser.email,
+          savedUser.fullName,
+          ENV.CLIENT_URL,
+        );
+      } catch (error) {
+        console.error("Failed to send welcome email : ", error);
+      }
     } else {
       res.status(400).json({
         message: "Invaild user data",

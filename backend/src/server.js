@@ -4,6 +4,7 @@ import { ENV } from "./lib/env.js";
 import authRoutes from "./routes/auth.route.js";
 import messageRoutes from "./routes/message.route.js";
 import path from "path";
+import cors from "cors";
 import { connectDB } from "./lib/db.js";
 
 const app = express();
@@ -11,6 +12,7 @@ const __dirname = path.resolve();
 
 const PORT = ENV.PORT || 5000;
 
+app.use(cors({ origin: ENV.CLIENT_URL, credentials: true })); //Allow Frontend to send cookies to our backend
 app.use(express.json()); //req.body
 app.use(cookieParser()); //get cookie from user browser for authentication
 

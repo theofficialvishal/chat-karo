@@ -60,7 +60,7 @@ export const sendMessage = async (req, res) => {
         .json({ message: "Cannot send messages to yourself." });
     }
 
-    const receiverExists = await User.exists({ _id: receiverId });
+    const receiverExists = await userModel.exists({ _id: receiverId });
     if (!receiverExists) {
       return res.status(404).json({ message: "Receiver not found." });
     }

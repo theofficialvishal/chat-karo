@@ -49,9 +49,10 @@ const ChatContainer = () => {
                   )}
                   {msg.text && <p className="mt-2">{msg.text}</p>}
                   <p className="text-xs mt-1 opacity-75 flex items-center gap-1">
-                    {new Date(msg.createdAt).toLocaleTimeString(undefined, {
+                    {new Date(msg.createdAt).toLocaleTimeString("en-US", {
                       hour: "2-digit",
                       minute: "2-digit",
+                      hour12: true,
                     })}
                   </p>
                 </div>

@@ -1,26 +1,31 @@
-✨ Full-Stack Chat App with Auth & Emails ✨
-Demo App
+<h1 align="center">✨ Full-Stack Chat App with Auth & Emails ✨</h1>
 
-<img width="3839" height="1934" alt="image" src="https://github.com/user-attachments/assets/1e27e428-d977-4aff-88e7-cc4fdbd665f3" />
-
+![Demo App](<img width="3839" height="1927" alt="image" src="https://github.com/user-attachments/assets/7322092f-bc0b-44b4-900b-65bcd9785242" />
+)
 
 Highlights:
 
-🔐 Custom JWT Authentication (no 3rd-party auth)
-⚡ Real-time Messaging via Socket.io
-🟢 Online/Offline Presence Indicators
-🔔 Notification & Typing Sounds (with toggle)
-📨 Welcome Emails on Signup (Resend)
-🗂️ Image Uploads (Cloudinary)
-🧰 REST API with Node.js & Express
-🧱 MongoDB for Data Persistence
-🚦 API Rate-Limiting powered by Arcjet
-🎨 Beautiful UI with React, Tailwind CSS & DaisyUI
-🧠 Zustand for State Management
-🧑‍💻 Git & GitHub Workflow (branches, PRs, merges)
-🚀 Easy Deployment (free-tier friendly with Sevalla)
-🧪 .env Setup
-Backend (/backend)
+- 🔐 Custom JWT Authentication (no 3rd-party auth)
+- ⚡ Real-time Messaging via Socket.io
+- 🟢 Online/Offline Presence Indicators
+- 🔔 Notification & Typing Sounds (with toggle)
+- 📨 Welcome Emails on Signup (Resend)
+- 🗂️ Image Uploads (Cloudinary)
+- 🧰 REST API with Node.js & Express
+- 🧱 MongoDB for Data Persistence
+- 🚦 API Rate-Limiting powered by Arcjet
+- 🎨 Beautiful UI with React, Tailwind CSS & DaisyUI
+- 🧠 Zustand for State Management
+- 🧑‍💻 Git & GitHub Workflow (branches, PRs, merges)
+- 🚀 Easy Deployment (free-tier friendly with Sevalla)
+
+---
+
+## 🧪 .env Setup
+
+### Backend (`/backend`)
+
+```bash
 PORT=3000
 MONGO_URI=your_mongo_uri_here
 
@@ -40,11 +45,22 @@ CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 
 ARCJET_KEY=your_arcjet_key
 ARCJET_ENV=development
-🔧 Run the Backend
+```
+
+---
+
+## 🔧 Run the Backend
+
+```bash
 cd backend
 npm install
 npm run dev
-💻 Run the Frontend
+```
+
+## 💻 Run the Frontend
+
+```bash
 cd frontend
 npm install
 npm run dev
+```

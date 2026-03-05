@@ -3,10 +3,7 @@ import { axiosInstance } from "../lib/axios.js";
 import toast from "react-hot-toast";
 import { io } from "socket.io-client";
 
-const BASE_URL =
-  import.meta.env.MODE === "development"
-    ? "http://localhost:4000"
-    : "https://chat-karo-jm79.onrender.com";
+const BASE_URL = "https://chat-karo-jm79.onrender.com";
 
 export const useAuthStore = create((set, get) => ({
   authUser: null,
@@ -23,7 +20,6 @@ export const useAuthStore = create((set, get) => ({
       set({ authUser: res.data });
       get().connectSocket();
     } catch (error) {
-      console.log("Error in authCheck : ", error);
       set({ authUser: null });
     } finally {
       set({ isCheckingAuth: false });

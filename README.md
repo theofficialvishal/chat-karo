@@ -1,7 +1,7 @@
 <h1 align="center">✨ Full-Stack Chat App with Auth & Emails ✨</h1>
 
-![Demo App](<img width="3839" height="1927" alt="image" src="https://github.com/user-attachments/assets/7322092f-bc0b-44b4-900b-65bcd9785242" />
-)
+<img width="3839" height="1927" alt="image" src="https://github.com/user-attachments/assets/212d5eea-3a0a-48db-8d18-dc0a85e33bb7" />
+
 
 Highlights:
 

@@ -64,3 +64,22 @@ cd frontend
 npm install
 npm run dev
 ```
+
+---
+
+## 🐳 Docker Deployment
+
+The app is fully dockerized with a multi-stage build that serves both the frontend and backend from a single container.
+
+### 1. Build the Docker Image
+From the root of the project, run:
+```bash
+docker build -t chat-karo .
+```
+
+### 2. Run the Docker Container
+Make sure to provide your `.env` file variables to the container:
+```bash
+docker run -p 5000:5000 --env-file backend/.env chat-karo
+```
+*Note: Make sure `NODE_ENV=production` is set in your environment if you want the backend to serve the compiled frontend.*

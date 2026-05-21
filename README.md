@@ -15,9 +15,8 @@ Highlights:
 - 🧱 MongoDB for Data Persistence
 - 🚦 API Rate-Limiting powered by Arcjet
 - 🎨 Beautiful UI with React, Tailwind CSS & DaisyUI
-- 🧠 Zustand for State Management
-- 🧑‍💻 Git & GitHub Workflow (branches, PRs, merges)
-- 🚀 Easy Deployment (free-tier friendly with Sevalla)
+- 🧠 Zustand for State Management (with Optimistic UI Updates)
+- 🐳 Dockerized Multi-Stage Build & Deployment
 
 ---
 
